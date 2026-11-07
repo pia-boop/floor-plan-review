@@ -3,124 +3,147 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Floor Plan Review | Pia Uy Design Co.</title>
+<title>Floor Plan Review | Pia Uy, The Virtual Architect</title>
 <meta name="description" content="Submit your floor plan for a free review by licensed architect Pia Uy. Featured plans are broken down on YouTube.">
 <meta property="og:title" content="Send me your floor plan. I'll review it on YouTube.">
 <meta property="og:description" content="Free floor plan reviews by a licensed architect with 14 years of experience.">
-<style>html,body{margin:0;background:#f7f3ec}html{scroll-behavior:smooth}</style>
-</head>
-<body>
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Brand fonts: Playfair Display + Futura. Futura isn't a free web font, so Jost (a Futura-style font) stands in. -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <!-- To connect the form: find "PASTE YOUR GHL FORM EMBED HERE" below and replace the placeholder
-     with your GHL form's embed code (Sites > Forms > your form > Integrate > Embed).
-     To change colors, edit the 4 values under .pfp in the <style> block. -->
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
+     with your GHL form's embed code (Sites > Forms > your form > Integrate > Embed). -->
 <style>
-  .pfp {
-    --ink: #1f1d1a;        /* text */
-    --paper: #f7f3ec;      /* background */
-    --accent: #b5643c;     /* buttons, highlights */
-    --line: #e3dccf;       /* borders */
-    background: var(--paper);
+  /* Brand colors from the Pia Uy | The Virtual Architect brand guide */
+  :root {
+    --wine: #4C2129;
+    --ink: #1A1A1A;
+    --white: #FFFFFF;
+    --cream: #EFE7E1;
+    --line: rgba(76, 33, 41, .16);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--cream);
     color: var(--ink);
-    font-family: 'Inter', system-ui, sans-serif;
-    line-height: 1.6;
+    font-family: Futura, 'Jost', 'Century Gothic', sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 1.7;
     -webkit-font-smoothing: antialiased;
   }
-  .pfp * { box-sizing: border-box; margin: 0; padding: 0; }
-  .pfp h1, .pfp h2 { font-family: 'Playfair Display', Georgia, serif; line-height: 1.15; }
-  .pfp .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
-  .pfp section { padding: 72px 0; }
-  .pfp .eyebrow {
-    font-size: 13px; font-weight: 600; letter-spacing: .14em;
-    text-transform: uppercase; color: var(--accent); margin-bottom: 14px;
+  h1, h2, h3.serif { font-family: 'Playfair Display', Georgia, serif; font-weight: 400; line-height: 1.15; color: var(--wine); }
+  strong { font-weight: 500; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+  section { padding: 88px 0; }
+  .eyebrow {
+    font-size: 13px; font-weight: 400; letter-spacing: .24em;
+    text-transform: uppercase; color: var(--wine); margin-bottom: 18px;
   }
-  .pfp .btn {
-    display: inline-block; background: var(--accent); color: #fff;
-    font-weight: 600; font-size: 16px; padding: 16px 30px; border-radius: 6px;
-    text-decoration: none; transition: transform .15s, box-shadow .15s;
+  .btn {
+    display: inline-block; background: var(--wine); color: var(--white);
+    font-family: inherit; font-weight: 400; font-size: 14px; letter-spacing: .18em; text-transform: uppercase;
+    padding: 18px 34px; text-decoration: none; transition: background .2s, transform .2s;
   }
-  .pfp .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(181,100,60,.3); }
+  .btn:hover { background: var(--ink); transform: translateY(-2px); }
+
+  /* Header */
+  .top { padding: 22px 0; border-bottom: 1px solid var(--line); }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .top img { height: 44px; width: auto; display: block; }
+  .top a.link { font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--wine); text-decoration: none; font-weight: 400; white-space: nowrap; }
+  .top a.link:hover { text-decoration: underline; }
 
   /* Hero */
-  .pfp .hero { padding: 96px 0 80px; text-align: center; position: relative; overflow: hidden; }
-  .pfp .hero::before {
-    content: ""; position: absolute; inset: 0; opacity: .5; pointer-events: none;
+  .hero { padding: 104px 0 96px; text-align: center; position: relative; overflow: hidden; }
+  .hero::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
     background-image:
       linear-gradient(var(--line) 1px, transparent 1px),
       linear-gradient(90deg, var(--line) 1px, transparent 1px);
-    background-size: 40px 40px;
-    -webkit-mask-image: radial-gradient(ellipse at center, #000 20%, transparent 70%);
-            mask-image: radial-gradient(ellipse at center, #000 20%, transparent 70%);
+    background-size: 44px 44px;
+    -webkit-mask-image: radial-gradient(ellipse at center, #000 15%, transparent 68%);
+            mask-image: radial-gradient(ellipse at center, #000 15%, transparent 68%);
+    opacity: .7;
   }
-  .pfp .hero .wrap { position: relative; }
-  .pfp .hero h1 { font-size: clamp(36px, 6vw, 60px); max-width: 800px; margin: 0 auto 20px; }
-  .pfp .hero h1 em { font-style: italic; color: var(--accent); }
-  .pfp .hero p { font-size: 19px; max-width: 600px; margin: 0 auto 34px; opacity: .85; }
-  .pfp .hero small { display: block; margin-top: 16px; font-size: 14px; opacity: .65; }
+  .hero .wrap { position: relative; }
+  .hero h1 { font-size: clamp(38px, 6.2vw, 64px); max-width: 820px; margin: 0 auto 24px; }
+  .hero h1 em { font-style: italic; }
+  .hero p { font-size: 19px; max-width: 600px; margin: 0 auto 38px; }
+  .hero small { display: block; margin-top: 18px; font-size: 14px; opacity: .7; }
 
   /* Steps */
-  .pfp .steps { background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-  .pfp .center { text-align: center; }
-  .pfp h2 { font-size: clamp(28px, 4vw, 40px); margin-bottom: 44px; }
-  .pfp .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  .pfp .card { border: 1px solid var(--line); border-radius: 10px; padding: 30px 26px; background: var(--paper); }
-  .pfp .num {
-    width: 40px; height: 40px; border-radius: 50%; background: var(--ink); color: #fff;
-    display: flex; align-items: center; justify-content: center; font-weight: 600; margin-bottom: 18px;
-  }
-  .pfp .card h3 { font-size: 19px; margin-bottom: 8px; }
-  .pfp .card p { font-size: 15px; opacity: .8; }
+  .steps { background: var(--white); }
+  .center { text-align: center; }
+  h2 { font-size: clamp(30px, 4.2vw, 44px); margin-bottom: 48px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; text-align: left; }
+  .card { border-top: 2px solid var(--wine); padding: 28px 4px 0; }
+  .num { font-family: 'Playfair Display', Georgia, serif; font-size: 40px; color: var(--wine); line-height: 1; margin-bottom: 16px; }
+  .card h3 { font-weight: 500; font-size: 18px; margin-bottom: 8px; }
+  .card p { font-size: 16px; }
 
   /* What to send + privacy */
-  .pfp .two { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
-  .pfp .two h2 { margin-bottom: 22px; }
-  .pfp ul.check { list-style: none; }
-  .pfp ul.check li { padding: 10px 0 10px 32px; position: relative; border-bottom: 1px solid var(--line); }
-  .pfp ul.check li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
-  .pfp .privacy { background: var(--ink); color: var(--paper); border-radius: 12px; padding: 34px 30px; }
-  .pfp .privacy h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 24px; margin-bottom: 14px; }
-  .pfp .privacy p { opacity: .85; margin-bottom: 10px; font-size: 15px; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+  .two h2 { margin-bottom: 26px; }
+  ul.check { list-style: none; }
+  ul.check li { padding: 12px 0 12px 30px; position: relative; border-bottom: 1px solid var(--line); }
+  ul.check li::before { content: "—"; position: absolute; left: 0; color: var(--wine); }
+  .privacy { background: var(--wine); color: var(--cream); padding: 40px 34px; }
+  .privacy h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: 26px; margin-bottom: 16px; color: var(--white); }
+  .privacy p { margin-bottom: 12px; font-size: 16px; }
+  .privacy p:last-child { margin-bottom: 0; }
 
   /* Form */
-  .pfp .form-section { background: #fff; border-top: 1px solid var(--line); }
-  .pfp .form-section h2 { margin-bottom: 12px; }
-  .pfp .form-section .sub { margin-bottom: 36px; opacity: .8; }
-  .pfp .form-box { max-width: 640px; margin: 0 auto; }
-  .pfp .form-placeholder {
-    border: 2px dashed var(--accent); border-radius: 10px; padding: 60px 24px;
-    text-align: center; color: var(--accent); font-weight: 600;
+  .form-section { background: var(--white); }
+  .form-section h2 { margin-bottom: 12px; }
+  .form-section .sub { margin-bottom: 40px; }
+  .form-box { max-width: 640px; margin: 0 auto; }
+  .form-placeholder {
+    border: 1px dashed var(--wine); padding: 64px 24px;
+    text-align: center; color: var(--wine); letter-spacing: .12em; text-transform: uppercase; font-size: 14px;
   }
 
   /* FAQ */
-  .pfp details { border-bottom: 1px solid var(--line); padding: 20px 0; max-width: 720px; margin: 0 auto; }
-  .pfp summary { cursor: pointer; font-weight: 600; font-size: 17px; list-style: none; position: relative; padding-right: 30px; }
-  .pfp summary::-webkit-details-marker { display: none; }
-  .pfp summary::after { content: "+"; position: absolute; right: 0; top: -2px; font-size: 22px; color: var(--accent); }
-  .pfp details[open] summary::after { content: "−"; }
-  .pfp details p { margin-top: 12px; opacity: .8; }
+  details { border-bottom: 1px solid var(--line); padding: 22px 0; max-width: 720px; margin: 0 auto; }
+  summary { cursor: pointer; font-weight: 400; font-size: 18px; list-style: none; position: relative; padding-right: 32px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; position: absolute; right: 0; top: -4px; font-size: 24px; color: var(--wine); }
+  details[open] summary::after { content: "−"; }
+  details p { margin-top: 12px; }
 
-  .pfp footer { text-align: center; padding: 36px 20px; font-size: 14px; opacity: .6; }
+  footer { background: var(--wine); color: var(--cream); text-align: center; padding: 48px 20px; font-size: 14px; }
+  footer img { height: 44px; width: auto; display: block; margin: 0 auto 16px; }
 
   @media (max-width: 760px) {
-    .pfp section { padding: 56px 0; }
-    .pfp .hero { padding: 72px 0 60px; }
-    .pfp .grid, .pfp .two { grid-template-columns: 1fr; }
-    .pfp .two { gap: 36px; }
+    section { padding: 64px 0; }
+    .hero { padding: 72px 0 64px; }
+    .grid, .two { grid-template-columns: 1fr; }
+    .grid { gap: 36px; }
+    .two { gap: 40px; }
+    .top img { height: 36px; }
+    .top a.link { font-size: 11px; letter-spacing: .12em; }
   }
 </style>
+</head>
+<body>
 
-<div class="pfp">
+  <header class="top">
+    <div class="wrap">
+      <img src="assets/logo.png" alt="Pia Uy, The Virtual Architect">
+      <a href="#submit" class="link">Submit a plan</a>
+    </div>
+  </header>
 
   <!-- HERO -->
   <section class="hero">
     <div class="wrap">
       <div class="eyebrow">Floor Plan Review Series</div>
       <h1>Send me your floor plan. I'll review it <em>on YouTube.</em></h1>
-      <p>Planning to build or renovate? I'm a licensed architect with 14 years of experience. Submit your plan and I might feature it in my next video, showing what works and what to fix before you build.</p>
-      <a href="#submit" class="btn">Submit My Floor Plan</a>
-      <small>Free to submit. Takes 2 minutes.</small>
+      <p>Building or renovating soon? I'm a licensed architect with 14 years of experience. Send me your plan, and if it's picked, I'll walk through what works and what to fix before you build.</p>
+      <a href="#submit" class="btn">Submit my floor plan</a>
+      <small>Free to submit. Takes about 2 minutes.</small>
     </div>
   </section>
 
@@ -128,19 +151,19 @@
   <section class="steps">
     <div class="wrap center">
       <h2>How it works</h2>
-      <div class="grid" style="text-align:left">
+      <div class="grid">
         <div class="card">
-          <div class="num">1</div>
+          <div class="num">01</div>
           <h3>Upload your plan</h3>
-          <p>A PDF, a scan, a phone photo, even a hand sketch. If I can read it, I can review it.</p>
+          <p>A PDF, a scan, a phone photo, even a sketch on the back of a receipt. If I can read it, I can review it.</p>
         </div>
         <div class="card">
-          <div class="num">2</div>
+          <div class="num">02</div>
           <h3>I review it</h3>
-          <p>I check the layout, flow, light, ventilation and costly mistakes, the same way I would for a client.</p>
+          <p>I check layout, flow, light and ventilation, plus the mistakes that get expensive once the concrete is poured.</p>
         </div>
         <div class="card">
-          <div class="num">3</div>
+          <div class="num">03</div>
           <h3>Watch your feature</h3>
           <p>If your plan is picked, I'll email you when the video goes live so you can see the full breakdown.</p>
         </div>
@@ -155,18 +178,18 @@
         <div class="eyebrow">What to send</div>
         <h2>The more I know, the better the review</h2>
         <ul class="check">
-          <li>Your floor plan (all floors if it's more than one)</li>
+          <li>Your floor plan (every floor, if there's more than one)</li>
           <li>Lot size and where the property is (city or province only)</li>
           <li>Who will live there: family size, parents, helpers, pets</li>
-          <li>Your biggest worry about the plan</li>
+          <li>The one thing about the plan that keeps you up at night</li>
           <li>Your rough budget, if you're comfortable sharing</li>
         </ul>
       </div>
       <div class="privacy">
         <h3>Your privacy comes first</h3>
         <p>I never show your full name, exact address or contact details on the channel.</p>
-        <p>Any names, stamps or signatures on the plan get blurred before the video goes out.</p>
-        <p>You can choose to stay fully anonymous in the form.</p>
+        <p>Names, stamps and signatures on the plan are blurred before the video goes out.</p>
+        <p>Prefer to stay anonymous? Just tick the box in the form.</p>
       </div>
     </div>
   </section>
@@ -193,29 +216,31 @@
       <h2 class="center">Questions</h2>
       <details>
         <summary>Is it free?</summary>
-        <p>Yes. Submitting is 100% free. Featured plans are reviewed in a public YouTube video.</p>
+        <p>Yes. Submitting is completely free. Featured plans are reviewed in a public YouTube video.</p>
       </details>
       <details>
         <summary>Will every plan be featured?</summary>
-        <p>I get a lot of submissions, so I can't feature them all. I pick plans that will teach the most to other property owners.</p>
+        <p>I can't feature them all. I pick the plans that will teach other property owners the most.</p>
       </details>
       <details>
         <summary>Can I submit a hand-drawn sketch?</summary>
-        <p>Yes. Just make sure the photo is clear, well-lit and the room sizes are readable.</p>
+        <p>Yes. Make sure the photo is clear, well lit, and the room sizes are readable. Coffee stains are optional.</p>
       </details>
       <details>
         <summary>My house is already built. Can I still submit?</summary>
-        <p>Yes. Renovation plans and existing homes are welcome. Tell me what you want to change.</p>
+        <p>Yes. Renovation plans and existing homes are welcome. Tell me what you'd like to change.</p>
       </details>
       <details>
         <summary>What if I want a private, full review?</summary>
-        <p>Mention it in the form and my team will reach out about a paid design consultation.</p>
+        <p>Mention it in the form and my team will reach out about a design consultation.</p>
       </details>
     </div>
   </section>
 
-  <footer>© Pia Uy Design Co. All rights reserved.</footer>
-</div>
+  <footer>
+    <img src="assets/logo-white.png" alt="Pia Uy, The Virtual Architect">
+    © Pia Uy Design Co. All rights reserved.
+  </footer>
 
 </body>
 </html>
