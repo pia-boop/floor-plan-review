@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Floor Plan Review | Pia Uy Design Co.</title>
+<meta name="description" content="Submit your floor plan for a free review by licensed architect Pia Uy. Featured plans are broken down on YouTube.">
+<meta property="og:title" content="Send me your floor plan. I'll review it on YouTube.">
+<meta property="og:description" content="Free floor plan reviews by a licensed architect with 14 years of experience.">
+<style>html,body{margin:0;background:#f7f3ec}html{scroll-behavior:smooth}</style>
+</head>
+<body>
+<!-- To connect the form: find "PASTE YOUR GHL FORM EMBED HERE" below and replace the placeholder
+     with your GHL form's embed code (Sites > Forms > your form > Integrate > Embed).
+     To change colors, edit the 4 values under .pfp in the <style> block. -->
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  .pfp {
+    --ink: #1f1d1a;        /* text */
+    --paper: #f7f3ec;      /* background */
+    --accent: #b5643c;     /* buttons, highlights */
+    --line: #e3dccf;       /* borders */
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .pfp * { box-sizing: border-box; margin: 0; padding: 0; }
+  .pfp h1, .pfp h2 { font-family: 'Playfair Display', Georgia, serif; line-height: 1.15; }
+  .pfp .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+  .pfp section { padding: 72px 0; }
+  .pfp .eyebrow {
+    font-size: 13px; font-weight: 600; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 14px;
+  }
+  .pfp .btn {
+    display: inline-block; background: var(--accent); color: #fff;
+    font-weight: 600; font-size: 16px; padding: 16px 30px; border-radius: 6px;
+    text-decoration: none; transition: transform .15s, box-shadow .15s;
+  }
+  .pfp .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(181,100,60,.3); }
+
+  /* Hero */
+  .pfp .hero { padding: 96px 0 80px; text-align: center; position: relative; overflow: hidden; }
+  .pfp .hero::before {
+    content: ""; position: absolute; inset: 0; opacity: .5; pointer-events: none;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 40px 40px;
+    -webkit-mask-image: radial-gradient(ellipse at center, #000 20%, transparent 70%);
+            mask-image: radial-gradient(ellipse at center, #000 20%, transparent 70%);
+  }
+  .pfp .hero .wrap { position: relative; }
+  .pfp .hero h1 { font-size: clamp(36px, 6vw, 60px); max-width: 800px; margin: 0 auto 20px; }
+  .pfp .hero h1 em { font-style: italic; color: var(--accent); }
+  .pfp .hero p { font-size: 19px; max-width: 600px; margin: 0 auto 34px; opacity: .85; }
+  .pfp .hero small { display: block; margin-top: 16px; font-size: 14px; opacity: .65; }
+
+  /* Steps */
+  .pfp .steps { background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .pfp .center { text-align: center; }
+  .pfp h2 { font-size: clamp(28px, 4vw, 40px); margin-bottom: 44px; }
+  .pfp .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .pfp .card { border: 1px solid var(--line); border-radius: 10px; padding: 30px 26px; background: var(--paper); }
+  .pfp .num {
+    width: 40px; height: 40px; border-radius: 50%; background: var(--ink); color: #fff;
+    display: flex; align-items: center; justify-content: center; font-weight: 600; margin-bottom: 18px;
+  }
+  .pfp .card h3 { font-size: 19px; margin-bottom: 8px; }
+  .pfp .card p { font-size: 15px; opacity: .8; }
+
+  /* What to send + privacy */
+  .pfp .two { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  .pfp .two h2 { margin-bottom: 22px; }
+  .pfp ul.check { list-style: none; }
+  .pfp ul.check li { padding: 10px 0 10px 32px; position: relative; border-bottom: 1px solid var(--line); }
+  .pfp ul.check li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+  .pfp .privacy { background: var(--ink); color: var(--paper); border-radius: 12px; padding: 34px 30px; }
+  .pfp .privacy h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 24px; margin-bottom: 14px; }
+  .pfp .privacy p { opacity: .85; margin-bottom: 10px; font-size: 15px; }
+
+  /* Form */
+  .pfp .form-section { background: #fff; border-top: 1px solid var(--line); }
+  .pfp .form-section h2 { margin-bottom: 12px; }
+  .pfp .form-section .sub { margin-bottom: 36px; opacity: .8; }
+  .pfp .form-box { max-width: 640px; margin: 0 auto; }
+  .pfp .form-placeholder {
+    border: 2px dashed var(--accent); border-radius: 10px; padding: 60px 24px;
+    text-align: center; color: var(--accent); font-weight: 600;
+  }
+
+  /* FAQ */
+  .pfp details { border-bottom: 1px solid var(--line); padding: 20px 0; max-width: 720px; margin: 0 auto; }
+  .pfp summary { cursor: pointer; font-weight: 600; font-size: 17px; list-style: none; position: relative; padding-right: 30px; }
+  .pfp summary::-webkit-details-marker { display: none; }
+  .pfp summary::after { content: "+"; position: absolute; right: 0; top: -2px; font-size: 22px; color: var(--accent); }
+  .pfp details[open] summary::after { content: "−"; }
+  .pfp details p { margin-top: 12px; opacity: .8; }
+
+  .pfp footer { text-align: center; padding: 36px 20px; font-size: 14px; opacity: .6; }
+
+  @media (max-width: 760px) {
+    .pfp section { padding: 56px 0; }
+    .pfp .hero { padding: 72px 0 60px; }
+    .pfp .grid, .pfp .two { grid-template-columns: 1fr; }
+    .pfp .two { gap: 36px; }
+  }
+</style>
+
+<div class="pfp">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Floor Plan Review Series</div>
+      <h1>Send me your floor plan. I'll review it <em>on YouTube.</em></h1>
+      <p>Planning to build or renovate? I'm a licensed architect with 14 years of experience. Submit your plan and I might feature it in my next video, showing what works and what to fix before you build.</p>
+      <a href="#submit" class="btn">Submit My Floor Plan</a>
+      <small>Free to submit. Takes 2 minutes.</small>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="steps">
+    <div class="wrap center">
+      <h2>How it works</h2>
+      <div class="grid" style="text-align:left">
+        <div class="card">
+          <div class="num">1</div>
+          <h3>Upload your plan</h3>
+          <p>A PDF, a scan, a phone photo, even a hand sketch. If I can read it, I can review it.</p>
+        </div>
+        <div class="card">
+          <div class="num">2</div>
+          <h3>I review it</h3>
+          <p>I check the layout, flow, light, ventilation and costly mistakes, the same way I would for a client.</p>
+        </div>
+        <div class="card">
+          <div class="num">3</div>
+          <h3>Watch your feature</h3>
+          <p>If your plan is picked, I'll email you when the video goes live so you can see the full breakdown.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT TO SEND + PRIVACY -->
+  <section>
+    <div class="wrap two">
+      <div>
+        <div class="eyebrow">What to send</div>
+        <h2>The more I know, the better the review</h2>
+        <ul class="check">
+          <li>Your floor plan (all floors if it's more than one)</li>
+          <li>Lot size and where the property is (city or province only)</li>
+          <li>Who will live there: family size, parents, helpers, pets</li>
+          <li>Your biggest worry about the plan</li>
+          <li>Your rough budget, if you're comfortable sharing</li>
+        </ul>
+      </div>
+      <div class="privacy">
+        <h3>Your privacy comes first</h3>
+        <p>I never show your full name, exact address or contact details on the channel.</p>
+        <p>Any names, stamps or signatures on the plan get blurred before the video goes out.</p>
+        <p>You can choose to stay fully anonymous in the form.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section class="form-section" id="submit">
+    <div class="wrap center">
+      <div class="eyebrow">Submit your plan</div>
+      <h2>Get your floor plan reviewed</h2>
+      <p class="sub">Fill this in and upload your plan. I read every submission.</p>
+      <div class="form-box">
+
+        <!-- ▼▼▼ PASTE YOUR GHL FORM EMBED HERE (replace the whole div below) ▼▼▼ -->
+        <div class="form-placeholder">Your GHL form goes here</div>
+        <!-- ▲▲▲ END OF FORM EMBED ▲▲▲ -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <div class="wrap">
+      <h2 class="center">Questions</h2>
+      <details>
+        <summary>Is it free?</summary>
+        <p>Yes. Submitting is 100% free. Featured plans are reviewed in a public YouTube video.</p>
+      </details>
+      <details>
+        <summary>Will every plan be featured?</summary>
+        <p>I get a lot of submissions, so I can't feature them all. I pick plans that will teach the most to other property owners.</p>
+      </details>
+      <details>
+        <summary>Can I submit a hand-drawn sketch?</summary>
+        <p>Yes. Just make sure the photo is clear, well-lit and the room sizes are readable.</p>
+      </details>
+      <details>
+        <summary>My house is already built. Can I still submit?</summary>
+        <p>Yes. Renovation plans and existing homes are welcome. Tell me what you want to change.</p>
+      </details>
+      <details>
+        <summary>What if I want a private, full review?</summary>
+        <p>Mention it in the form and my team will reach out about a paid design consultation.</p>
+      </details>
+    </div>
+  </section>
+
+  <footer>© Pia Uy Design Co. All rights reserved.</footer>
+</div>
+
+</body>
+</html>
